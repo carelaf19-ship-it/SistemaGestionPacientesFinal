@@ -136,39 +136,19 @@ SistemaGestionPacientesFinal/
 
 ## Evidencias y capturas de pantalla
 
-Las imágenes se cargan directamente desde el repositorio para que sean visibles al abrir este README en GitHub.
+Las capturas están guardadas directamente dentro de `docs/capturas/` en formato PNG para que GitHub las muestre correctamente.
 
-### Evidencia 1 — Menú, registro y validaciones
+### Formulario para registrar paciente
 
-Incluye:
+![Formulario para registrar paciente](docs/capturas/02-formulario-registrar.png)
 
-1. Menú principal.
-2. Formulario para registrar paciente.
-3. Registro exitoso.
-4. Validación de campo obligatorio.
-5. Validación de edad incorrecta.
-6. Validación de ID duplicado.
+### Registro exitoso
 
-![Evidencias de menú, registro y validaciones](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-01-registro-validaciones.webp)
+![Registro exitoso](docs/capturas/03-registro-exitoso.png)
 
-### Evidencia 2 — Listado, búsqueda, actualización y eliminación
+### Validación de edad incorrecta
 
-Incluye:
-
-7. Listado de pacientes en `DataGridView`.
-8. Búsqueda por ID.
-9. Búsqueda por nombre.
-10. Paciente/ID inexistente.
-11. Pregunta para repetir el registro.
-12. Formulario de actualización.
-13. Actualización exitosa.
-14. Formulario de eliminación.
-15. Confirmación antes de eliminar.
-16. Eliminación exitosa.
-17. Listado después de eliminar.
-18. Pregunta para repetir una operación de actualización o eliminación.
-
-![Evidencias del CRUD completo](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-02-crud-completo.webp)
+![Validación de edad incorrecta](docs/capturas/05-validacion-edad.png)
 
 ## Matriz de cumplimiento
 
