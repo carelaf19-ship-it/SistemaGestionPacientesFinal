@@ -1,24 +1,44 @@
 # Evidencias del Sistema de Gestión de Pacientes
 
-Esta carpeta contiene las capturas utilizadas como evidencia visual de la ejecución del proyecto.
+Esta carpeta contiene las evidencias visuales de la ejecución del proyecto **Sistema de Gestión de Pacientes**.
 
-| Archivo | Evidencia |
-|---|---|
-| `01-menu-principal.png` | Menú principal del sistema |
-| `02-formulario-registrar.png` | Formulario de registro |
-| `03-registro-exitoso.png` | Registro exitoso |
-| `04-campo-obligatorio.png` | Validación de campo obligatorio |
-| `05-validacion-edad.png` | Validación de edad incorrecta |
-| `06-id-duplicado.png` | Validación de ID duplicado |
-| `07-listado-pacientes.png` | Listado en DataGridView |
-| `08-busqueda-id.png` | Búsqueda por ID |
-| `09-busqueda-nombre.png` | Búsqueda por nombre |
-| `10-paciente-no-existe.png` | Búsqueda sin resultados / paciente inexistente |
-| `11-formulario-actualizar.png` | Formulario de actualización |
-| `12-actualizacion-exitosa.png` | Actualización exitosa |
-| `13-formulario-eliminar.png` | Formulario de eliminación |
-| `14-confirmacion-eliminar.png` | Confirmación previa a eliminar |
-| `15-eliminacion-exitosa.png` | Eliminación exitosa |
-| `16-listado-despues-eliminar.png` | Listado después de eliminar |
-| `17-repetir-registro.png` | Pregunta para repetir registro |
-| `18-repetir-actualizar-eliminar.png` | Pregunta para repetir operación |
+> Las imágenes se muestran directamente en este README para que puedan verse desde GitHub sin tener que descargar ningún archivo.
+
+## Evidencia 1 — Menú, registro y validaciones
+
+Esta evidencia incluye:
+
+1. Menú principal.
+2. Formulario para registrar paciente.
+3. Registro exitoso.
+4. Validación de campo obligatorio.
+5. Validación de edad incorrecta.
+6. Validación de ID duplicado.
+
+![Evidencia 1 - Menú, registro y validaciones](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-01-registro-validaciones.webp)
+
+## Evidencia 2 — CRUD completo
+
+Esta evidencia incluye:
+
+7. Listado de pacientes en `DataGridView`.
+8. Búsqueda de paciente por ID.
+9. Búsqueda por nombre.
+10. Paciente o ID inexistente.
+11. Pregunta para repetir el registro.
+12. Formulario de actualización.
+13. Actualización exitosa.
+14. Formulario de eliminación.
+15. Confirmación antes de eliminar.
+16. Eliminación exitosa.
+17. Listado después de eliminar.
+18. Pregunta para repetir una operación de actualización o eliminación.
+
+![Evidencia 2 - Listado, búsqueda, actualización y eliminación](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-02-crud-completo.webp)
+
+## Archivos de evidencia
+
+- `evidencias-01-registro-validaciones.webp`
+- `evidencias-02-crud-completo.webp`
+
+Estas capturas demuestran el funcionamiento de las operaciones CRUD, las validaciones, los mensajes al usuario y los formularios principales requeridos para la práctica.
