@@ -1,12 +1,12 @@
 # Sistema de Gestión de Pacientes
 
-Proyecto final de **Programación Básica** desarrollado en **C# con Windows Forms (.NET 8)** para la Universidad Central del Este (UCE).
+Caso práctico de **Programación Básica** desarrollado en **C# con Windows Forms (.NET 8)** para la **Universidad Central del Este (UCE)**.
 
-La aplicación simula un sistema de gestión de pacientes para una clínica. Permite realizar las operaciones CRUD (**crear, leer, actualizar y eliminar**) utilizando una lista dinámica `List<Paciente>` como almacenamiento temporal en memoria.
+El sistema simula la gestión de pacientes de un centro de salud y permite realizar las operaciones CRUD: **registrar, listar/consultar, buscar, actualizar y eliminar**. Los datos se almacenan temporalmente en memoria mediante una lista dinámica `List<Paciente>`.
 
 ## Integrantes
 
-> Completar estos datos antes de la entrega final.
+> Completar los datos pendientes antes de entregar el PDF final al profesor.
 
 - **Integrante 1:** ______________________________
 - **Matrícula:** _________________________________
@@ -17,18 +17,15 @@ La aplicación simula un sistema de gestión de pacientes para una clínica. Per
 **Asignatura:** Programación Básica  
 **Actividad:** Caso Práctico – Sistema de Gestión de Pacientes  
 **Docente:** Gamalier Reyes del Carmen  
-**Sección:** _________________________________  
-**Fecha:** 12 de agosto de 2026
+**Sección:** _________________________________
 
 ## Descripción breve
 
-El sistema permite registrar, listar, buscar, actualizar y eliminar pacientes desde una interfaz gráfica Windows Forms. Cada paciente se representa mediante un objeto de la clase `Paciente`, mientras que la lógica de negocio se concentra en la clase `GestorPacientes`.
-
-La información se mantiene únicamente mientras la aplicación está en ejecución, ya que el proyecto utiliza `List<Paciente>` como base de datos temporal en memoria, tal como requiere la práctica.
+La aplicación permite gestionar pacientes mediante una interfaz gráfica Windows Forms. Cada paciente es representado por un objeto de la clase `Paciente`. La lógica de validación y las operaciones sobre la lista se encuentran separadas en la clase `GestorPacientes`, manteniendo los formularios enfocados en la interacción con el usuario.
 
 ## Datos de entrada
 
-La aplicación recibe los siguientes datos mediante controles como `TextBox`, `ComboBox` y `DateTimePicker`:
+El sistema recibe mediante `TextBox`, `ComboBox` y `DateTimePicker`:
 
 - ID o cédula.
 - Nombre completo.
@@ -40,32 +37,29 @@ La aplicación recibe los siguientes datos mediante controles como `TextBox`, `C
 
 ## Datos que procesa
 
-El sistema realiza las siguientes operaciones y validaciones:
+El programa realiza:
 
-- Registro de pacientes.
 - Validación de campos obligatorios.
-- Conversión y validación numérica de la edad.
-- Validación del rango de edad.
-- Verificación de ID no duplicado.
-- Validación de la fecha de ingreso.
+- Validación de edad numérica y rango permitido.
+- Validación de ID no duplicado.
+- Validación de fecha de ingreso.
 - Búsqueda por ID o nombre.
-- Actualización de datos de un paciente existente.
-- Eliminación con confirmación previa.
-- Manejo de excepciones mediante `try/catch/finally`.
-- Manejo de paciente inexistente mediante la excepción personalizada `PacienteNoEncontradoException`.
+- Registro, actualización y eliminación sobre `List<Paciente>`.
+- Confirmación antes de eliminar.
+- Manejo de errores mediante `try/catch/finally`.
+- Excepción personalizada `PacienteNoEncontradoException`.
 
 ## Datos de salida
 
-Los resultados se presentan al usuario mediante:
+La información se presenta mediante:
 
-- `DataGridView` para mostrar listados y resultados de búsqueda.
-- `MessageBox` de información para operaciones exitosas.
-- `MessageBox` de confirmación para eliminar pacientes y repetir operaciones.
-- `MessageBox` de advertencia y error para datos inválidos o pacientes inexistentes.
+- `DataGridView` para listados y resultados de búsqueda.
+- `MessageBox` de información y confirmación.
+- Mensajes de advertencia y error cuando los datos no son válidos.
 
 ## Enumeraciones utilizadas
 
-El proyecto utiliza enumeraciones para evitar valores de texto libre en campos predefinidos:
+Se utilizan dos enumeraciones para representar valores predefinidos y evitar texto libre:
 
 ```csharp
 public enum Sexo
@@ -83,29 +77,27 @@ public enum EstadoPaciente
 }
 ```
 
-Estas enumeraciones se cargan en controles `ComboBox` de los formularios.
+Estas enumeraciones son mostradas en la interfaz mediante controles `ComboBox`.
 
 ## Funcionalidades CRUD
 
 ### Crear — Registrar paciente
 
-Permite registrar un nuevo paciente después de validar los datos. El sistema impide registrar un ID que ya exista.
+Permite registrar un paciente validando que los campos sean correctos y que el ID no exista previamente.
 
-### Leer — Listar y buscar pacientes
+### Leer — Listar y buscar
 
-Permite mostrar todos los pacientes en un `DataGridView` y realizar búsquedas por ID o nombre.
+Muestra los pacientes registrados en un `DataGridView` y permite buscar por ID o nombre.
 
 ### Actualizar — Modificar paciente
 
-Localiza un paciente por su ID, carga sus datos en el formulario y permite modificar la información validando nuevamente todos los campos.
+Localiza un paciente por su ID, carga sus datos y permite modificarlos después de aplicar nuevamente las validaciones.
 
-### Eliminar — Dar de baja un paciente
+### Eliminar — Dar de baja
 
-Localiza un paciente por ID y solicita confirmación mediante `MessageBox` antes de eliminarlo de la lista.
+Localiza al paciente por ID y solicita confirmación con `MessageBox` antes de eliminarlo de la lista.
 
-## Arquitectura y organización
-
-La aplicación está separada por responsabilidades:
+## Organización del proyecto
 
 ```text
 SistemaGestionPacientesFinal/
@@ -133,14 +125,72 @@ SistemaGestionPacientesFinal/
 └── README.md
 ```
 
-### Responsabilidades principales
+### Responsabilidades
 
-- **`Paciente`**: modelo con los datos de cada paciente.
-- **`Enumeraciones`**: contiene `Sexo` y `EstadoPaciente`.
-- **`GestorPacientes`**: lógica CRUD, validaciones y búsquedas sobre `List<Paciente>`.
-- **`AppData`**: mantiene una instancia compartida del gestor para todos los formularios.
-- **`PacienteNoEncontradoException`**: excepción personalizada para búsquedas de pacientes inexistentes.
-- **Formularios**: se encargan principalmente de la interacción con el usuario.
+- `Paciente.cs`: modelo de datos del paciente.
+- `Enumeraciones.cs`: contiene `Sexo` y `EstadoPaciente`.
+- `GestorPacientes.cs`: lógica CRUD, búsquedas y validaciones sobre `List<Paciente>`.
+- `AppData.cs`: comparte una misma instancia del gestor entre los formularios.
+- `PacienteNoEncontradoException.cs`: excepción personalizada.
+- `Forms/`: interfaz gráfica y eventos de interacción con el usuario.
+
+## Evidencias y capturas de pantalla
+
+Las siguientes evidencias corresponden a las capturas suministradas después de probar el sistema.
+
+### Evidencia 1 — Menú, registro y validaciones
+
+Incluye:
+
+1. Menú principal.
+2. Formulario para registrar paciente.
+3. Registro exitoso.
+4. Validación de campo obligatorio.
+5. Validación de edad incorrecta.
+6. Validación de ID duplicado.
+
+![Evidencias de menú, registro y validaciones](docs/capturas/evidencias-01-registro-validaciones.webp)
+
+### Evidencia 2 — Listado, búsqueda, actualización y eliminación
+
+Incluye:
+
+7. Listado de pacientes en `DataGridView`.
+8. Búsqueda por ID.
+9. Búsqueda por nombre.
+10. Paciente/ID inexistente.
+11. Pregunta para repetir el registro.
+12. Formulario de actualización.
+13. Actualización exitosa.
+14. Formulario de eliminación.
+15. Confirmación antes de eliminar.
+16. Eliminación exitosa.
+17. Listado después de eliminar.
+18. Pregunta para repetir una operación de actualización o eliminación.
+
+![Evidencias del CRUD completo](docs/capturas/evidencias-02-crud-completo.webp)
+
+## Matriz de cumplimiento
+
+| Requisito | Implementación |
+|---|---|
+| C# Windows Forms | `SistemaGestionPacientes.csproj` |
+| Lista dinámica `List<T>` | `Services/GestorPacientes.cs` |
+| Clase modelo | `Models/Paciente.cs` |
+| Clase de gestión | `Services/GestorPacientes.cs` |
+| Dos enumeraciones | `Models/Enumeraciones.cs` |
+| Crear | Método `Registrar` |
+| Leer/listar | Método `ListarTodos` |
+| Buscar | Métodos `BuscarPorId` y `BuscarPorIdONombre` |
+| Actualizar | Método `Actualizar` |
+| Eliminar | Método `Eliminar` |
+| ID no duplicado | Método `ExisteId` y validaciones del gestor |
+| `try/catch/finally` | Formularios CRUD |
+| Excepción personalizada | `PacienteNoEncontradoException` |
+| `DataGridView` | Formularios de listado y búsqueda |
+| `MessageBox` | Confirmaciones, información, advertencias y errores |
+| Menú principal | `FrmPrincipal.cs` |
+| Evidencias de ejecución | `docs/capturas/` |
 
 ## Requisitos para ejecutar
 
@@ -149,118 +199,31 @@ SistemaGestionPacientesFinal/
 - Carga de trabajo **Desarrollo de escritorio de .NET**.
 - .NET 8 SDK.
 
-## Cómo ejecutar el proyecto
+## Cómo ejecutar
 
-1. Clonar o descargar este repositorio.
+1. Descargar o clonar el repositorio.
 2. Abrir `SistemaGestionPacientes.sln` en Visual Studio.
-3. Esperar a que Visual Studio cargue el proyecto.
-4. Presionar `F5` o el botón **Iniciar**.
-5. Utilizar el menú principal para seleccionar la operación deseada.
-6. Elegir **Salir del sistema** para finalizar la aplicación.
+3. Esperar a que cargue el proyecto.
+4. Presionar `F5` o **Iniciar**.
+5. Utilizar el menú principal para acceder a cada operación.
+6. Para finalizar, elegir **Salir del sistema**.
 
-## Evidencias y capturas de pantalla
+## Casos de prueba realizados
 
-Las siguientes imágenes muestran los formularios y las pruebas realizadas a las funcionalidades CRUD, validaciones y mensajes del sistema.
-
-### 1. Menú principal
-
-![Menú principal](docs/capturas/01-menu-principal.png)
-
-### 2. Registro de paciente
-
-![Formulario registrar](docs/capturas/02-formulario-registrar.png)
-
-![Registro exitoso](docs/capturas/03-registro-exitoso.png)
-
-![Pregunta para registrar otro paciente](docs/capturas/17-repetir-registro.png)
-
-### 3. Validaciones
-
-**Campo obligatorio:**
-
-![Campo obligatorio](docs/capturas/04-campo-obligatorio.png)
-
-**Edad incorrecta:**
-
-![Validación de edad](docs/capturas/05-validacion-edad.png)
-
-**ID duplicado:**
-
-![ID duplicado](docs/capturas/06-id-duplicado.png)
-
-### 4. Listado de pacientes
-
-![Listado de pacientes](docs/capturas/07-listado-pacientes.png)
-
-### 5. Búsqueda de pacientes
-
-**Búsqueda por ID:**
-
-![Búsqueda por ID](docs/capturas/08-busqueda-id.png)
-
-**Búsqueda por nombre:**
-
-![Búsqueda por nombre](docs/capturas/09-busqueda-nombre.png)
-
-**Paciente inexistente:**
-
-![Paciente no existe](docs/capturas/10-paciente-no-existe.png)
-
-### 6. Actualización de pacientes
-
-![Formulario actualizar](docs/capturas/11-formulario-actualizar.png)
-
-![Actualización exitosa](docs/capturas/12-actualizacion-exitosa.png)
-
-### 7. Eliminación de pacientes
-
-![Formulario eliminar](docs/capturas/13-formulario-eliminar.png)
-
-![Confirmación antes de eliminar](docs/capturas/14-confirmacion-eliminar.png)
-
-![Eliminación exitosa](docs/capturas/15-eliminacion-exitosa.png)
-
-![Listado después de eliminar](docs/capturas/16-listado-despues-eliminar.png)
-
-![Pregunta para repetir operación](docs/capturas/18-repetir-actualizar-eliminar.png)
-
-## Matriz de cumplimiento de requisitos
-
-| Requisito | Implementación / evidencia |
-|---|---|
-| Windows Forms en C# | Proyecto `SistemaGestionPacientes.csproj` con `UseWindowsForms=true` |
-| `List<T>` genérica | `Services/GestorPacientes.cs` usa `List<Paciente>` |
-| Clase de modelo | `Models/Paciente.cs` |
-| Clase de gestión | `Services/GestorPacientes.cs` |
-| Dos enumeraciones | `Models/Enumeraciones.cs` |
-| CRUD completo | Métodos `Registrar`, `ListarTodos`, `BuscarPorId`, `Actualizar` y `Eliminar` |
-| Validaciones | `GestorPacientes.ValidarPaciente` y formularios |
-| ID no duplicado | `ExisteId` y validación en registro/actualización |
-| Manejo de excepciones | `try/catch/finally` en formularios |
-| Excepción personalizada | `Exceptions/PacienteNoEncontradoException.cs` |
-| DataGridView | Formularios de listado y búsqueda |
-| Confirmación al eliminar | `FrmEliminarPaciente.cs` |
-| Pregunta después de transacciones | Formularios CRUD mediante `MessageBox` Sí/No |
-| Menú principal activo | `FrmPrincipal.cs` |
-| Capturas de pantalla | Carpeta `docs/capturas/` |
-| README completo | Este archivo |
-
-## Casos de prueba evidenciados
-
-1. Registro correcto de un paciente.
-2. Campo obligatorio vacío.
-3. Edad con formato incorrecto.
-4. Registro con ID duplicado.
-5. Listado de pacientes.
-6. Búsqueda por ID.
-7. Búsqueda por nombre.
-8. Búsqueda de paciente inexistente.
-9. Actualización correcta.
-10. Confirmación antes de eliminar.
-11. Eliminación correcta.
-12. Listado actualizado después de eliminar.
-13. Mensajes para repetir una operación o regresar al menú.
+- Registro exitoso.
+- Campo obligatorio vacío.
+- Edad incorrecta.
+- ID duplicado.
+- Listado de pacientes.
+- Búsqueda por ID.
+- Búsqueda por nombre.
+- Paciente inexistente.
+- Actualización exitosa.
+- Confirmación de eliminación.
+- Eliminación exitosa.
+- Listado posterior a la eliminación.
+- Repetición de operaciones mediante `MessageBox` Sí/No.
 
 ## Observación
 
-Los datos se almacenan únicamente en memoria mientras la aplicación permanece abierta. Este comportamiento es intencional para cumplir con el requisito académico de utilizar una lista dinámica `List<Paciente>` como almacenamiento temporal.
+La información se guarda únicamente durante la ejecución del programa. Al cerrar la aplicación, la lista en memoria se pierde intencionalmente, porque el proyecto exige utilizar `List<Paciente>` como almacenamiento temporal.
