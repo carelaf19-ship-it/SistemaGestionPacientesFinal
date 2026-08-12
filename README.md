@@ -136,7 +136,7 @@ SistemaGestionPacientesFinal/
 
 ## Evidencias y capturas de pantalla
 
-Las siguientes evidencias corresponden a las capturas suministradas después de probar el sistema.
+Las imágenes se cargan directamente desde el repositorio para que sean visibles al abrir este README en GitHub.
 
 ### Evidencia 1 — Menú, registro y validaciones
 
@@ -149,7 +149,7 @@ Incluye:
 5. Validación de edad incorrecta.
 6. Validación de ID duplicado.
 
-![Evidencias de menú, registro y validaciones](docs/capturas/evidencias-01-registro-validaciones.webp)
+![Evidencias de menú, registro y validaciones](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-01-registro-validaciones.webp)
 
 ### Evidencia 2 — Listado, búsqueda, actualización y eliminación
 
@@ -168,7 +168,7 @@ Incluye:
 17. Listado después de eliminar.
 18. Pregunta para repetir una operación de actualización o eliminación.
 
-![Evidencias del CRUD completo](docs/capturas/evidencias-02-crud-completo.webp)
+![Evidencias del CRUD completo](https://raw.githubusercontent.com/carelaf19-ship-it/SistemaGestionPacientesFinal/main/docs/capturas/evidencias-02-crud-completo.webp)
 
 ## Matriz de cumplimiento
 
