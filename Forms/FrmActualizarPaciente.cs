@@ -124,6 +124,11 @@ public class FrmActualizarPaciente : Form
 
     private void BtnCargar_Click(object? sender, EventArgs e)
     {
+        // Descarta cualquier paciente cargado previamente antes de una nueva búsqueda.
+        idOriginal = null;
+        LimpiarDatosPaciente();
+        HabilitarEdicion(false);
+
         try
         {
             Cursor = Cursors.WaitCursor;
@@ -246,10 +251,8 @@ public class FrmActualizarPaciente : Form
         dtpFechaIngreso.Enabled = habilitado;
     }
 
-    private void LimpiarFormulario()
+    private void LimpiarDatosPaciente()
     {
-        idOriginal = null;
-        txtBuscarId.Clear();
         txtId.Clear();
         txtNombre.Clear();
         txtEdad.Clear();
@@ -258,7 +261,13 @@ public class FrmActualizarPaciente : Form
 
         if (cmbSexo.Items.Count > 0) cmbSexo.SelectedIndex = 0;
         if (cmbEstado.Items.Count > 0) cmbEstado.SelectedIndex = 0;
+    }
 
+    private void LimpiarFormulario()
+    {
+        idOriginal = null;
+        txtBuscarId.Clear();
+        LimpiarDatosPaciente();
         HabilitarEdicion(false);
         txtBuscarId.Focus();
     }
