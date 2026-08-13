@@ -136,17 +136,51 @@ SistemaGestionPacientesFinal/
 
 ## Evidencias y capturas de pantalla
 
-Las capturas están guardadas directamente dentro de `docs/capturas/` en formato PNG para que GitHub las muestre correctamente.
+Las siguientes capturas muestran los formularios, las operaciones CRUD, las validaciones y los mensajes solicitados en la práctica. Se presentan en orden para que el funcionamiento del sistema pueda seguirse de principio a fin.
 
-### Formulario para registrar paciente
+### Evidencia 1 — Menú, registro y validaciones
+
+Esta evidencia contiene, en este orden:
+
+1. Menú principal.
+2. Formulario para registrar paciente.
+3. Registro exitoso.
+4. Validación de campo obligatorio.
+5. Validación de edad incorrecta.
+6. Validación de ID duplicado.
+
+![Menú, registro y validaciones](docs/capturas/evidencias-01-registro-validaciones.webp)
+
+### Evidencia 2 — Listado, búsquedas, actualización y eliminación
+
+Esta evidencia contiene, en este orden:
+
+7. Listado de pacientes en `DataGridView`.
+8. Búsqueda de paciente por ID.
+9. Búsqueda de paciente por nombre.
+10. Paciente o ID inexistente.
+11. Pregunta para realizar otro registro.
+12. Formulario para actualizar paciente.
+13. Actualización exitosa.
+14. Formulario para eliminar paciente.
+15. Confirmación antes de eliminar.
+16. Eliminación exitosa.
+17. Listado después de eliminar.
+18. Pregunta para repetir una operación de actualización o eliminación.
+
+![Listado, búsqueda, actualización y eliminación](docs/capturas/evidencias-02-crud-completo.webp)
+
+### Capturas individuales destacadas
+
+#### Formulario para registrar paciente
 
 ![Formulario para registrar paciente](docs/capturas/02-formulario-registrar.png)
 
-### Registro exitoso
+#### Registro exitoso
 
 ![Registro exitoso](docs/capturas/03-registro-exitoso.png)
 
-### Validación de edad incorrecta
+#### Validación de edad incorrecta
 
 ![Validación de edad incorrecta](docs/capturas/05-validacion-edad.png)
 
