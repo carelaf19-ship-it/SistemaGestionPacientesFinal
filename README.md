@@ -136,53 +136,79 @@ SistemaGestionPacientesFinal/
 
 ## Evidencias y capturas de pantalla
 
-Las siguientes capturas muestran los formularios, las operaciones CRUD, las validaciones y los mensajes solicitados en la práctica. Se presentan en orden para que el funcionamiento del sistema pueda seguirse de principio a fin.
+A continuación se muestran las **18 capturas reales de ejecución** del sistema, organizadas en el mismo orden en que se realizaron las pruebas.
 
-### Evidencia 1 — Menú, registro y validaciones
+### 1. Menú principal
 
-Esta evidencia contiene, en este orden:
+![01 - Menú principal](docs/capturas/01-menu-principal.png)
 
-1. Menú principal.
-2. Formulario para registrar paciente.
-3. Registro exitoso.
-4. Validación de campo obligatorio.
-5. Validación de edad incorrecta.
-6. Validación de ID duplicado.
+### 2. Formulario para registrar paciente
 
-![Menú, registro y validaciones](docs/capturas/evidencias-01-registro-validaciones.webp)
+![02 - Formulario para registrar paciente](docs/capturas/02-formulario-registrar.png)
 
-### Evidencia 2 — Listado, búsquedas, actualización y eliminación
+### 3. Registro exitoso
 
-Esta evidencia contiene, en este orden:
+![03 - Registro exitoso](docs/capturas/03-registro-exitoso.png)
 
-7. Listado de pacientes en `DataGridView`.
-8. Búsqueda de paciente por ID.
-9. Búsqueda de paciente por nombre.
-10. Paciente o ID inexistente.
-11. Pregunta para realizar otro registro.
-12. Formulario para actualizar paciente.
-13. Actualización exitosa.
-14. Formulario para eliminar paciente.
-15. Confirmación antes de eliminar.
-16. Eliminación exitosa.
-17. Listado después de eliminar.
-18. Pregunta para repetir una operación de actualización o eliminación.
+### 4. Validación de campo obligatorio
 
-![Listado, búsqueda, actualización y eliminación](docs/capturas/evidencias-02-crud-completo.webp)
+![04 - Validación de campo obligatorio](docs/capturas/04-campo-obligatorio.png)
 
-### Capturas individuales destacadas
+### 5. Validación de edad incorrecta
 
-#### Formulario para registrar paciente
+![05 - Validación de edad incorrecta](docs/capturas/05-validacion-edad.png)
 
-![Formulario para registrar paciente](docs/capturas/02-formulario-registrar.png)
+### 6. Validación de ID duplicado
 
-#### Registro exitoso
+![06 - Validación de ID duplicado](docs/capturas/06-validacion-id-duplicado.png)
 
-![Registro exitoso](docs/capturas/03-registro-exitoso.png)
+### 7. Listado de pacientes
 
-#### Validación de edad incorrecta
+![07 - Listado de pacientes](docs/capturas/07-listado-pacientes.png)
 
-![Validación de edad incorrecta](docs/capturas/05-validacion-edad.png)
+### 8. Búsqueda de paciente por ID
+
+![08 - Búsqueda de paciente por ID](docs/capturas/08-busqueda-por-id.png)
+
+### 9. Búsqueda por nombre
+
+![09 - Búsqueda por nombre](docs/capturas/09-busqueda-por-nombre.png)
+
+### 10. Paciente o ID inexistente
+
+![10 - Paciente o ID inexistente](docs/capturas/10-paciente-no-existe.png)
+
+### 11. Pregunta para repetir el registro
+
+![11 - Pregunta para repetir el registro](docs/capturas/11-repetir-registro.png)
+
+### 12. Formulario para actualizar paciente
+
+![12 - Formulario para actualizar paciente](docs/capturas/12-formulario-actualizar.png)
+
+### 13. Actualización exitosa
+
+![13 - Actualización exitosa](docs/capturas/13-actualizacion-exitosa.png)
+
+### 14. Formulario para eliminar paciente
+
+![14 - Formulario para eliminar paciente](docs/capturas/14-formulario-eliminar.png)
+
+### 15. Confirmación antes de eliminar
+
+![15 - Confirmación antes de eliminar](docs/capturas/15-confirmacion-eliminar.png)
+
+### 16. Eliminación exitosa
+
+![16 - Eliminación exitosa](docs/capturas/16-eliminacion-exitosa.png)
+
+### 17. Listado después de eliminar
+
+![17 - Listado después de eliminar](docs/capturas/17-listado-despues-eliminar.png)
+
+### 18. Pregunta para repetir actualización o eliminación
+
+![18 - Pregunta para repetir actualización o eliminación](docs/capturas/18-repetir-actualizar-eliminar.png)
 
 ## Matriz de cumplimiento
 
