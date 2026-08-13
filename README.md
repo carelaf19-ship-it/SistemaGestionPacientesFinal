@@ -8,16 +8,15 @@ El sistema simula la gestión de pacientes de un centro de salud y permite reali
 
 > Completar los datos pendientes antes de entregar el PDF final al profesor.
 
-- **Integrante 1:** ______________________________
-- **Matrícula:** _________________________________
-- **Integrante 2:** ______________________________
-- **Matrícula:** _________________________________
+- **Integrante 1:** Franklin Carela Martinez 
+- **Matrícula:** 20243994
+- **Integrante 2:** Carlos Manuel Silvestre Gil
+- **Matrícula:** 20242199
 
 **Universidad:** Universidad Central del Este (UCE)  
 **Asignatura:** Programación Básica  
 **Actividad:** Caso Práctico – Sistema de Gestión de Pacientes  
 **Docente:** Gamalier Reyes del Carmen  
-**Sección:** _________________________________
 
 ## Descripción breve
 
